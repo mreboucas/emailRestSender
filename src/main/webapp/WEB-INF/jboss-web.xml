@@ -1,0 +1,7 @@
+<jboss-web>
+	<!-- Specify the security domain for authentication/authorization and require 
+		that the domain's cache be flushed when the session invalidates. -->
+
+	<context-root>/emailRest</context-root>
+
+</jboss-web>

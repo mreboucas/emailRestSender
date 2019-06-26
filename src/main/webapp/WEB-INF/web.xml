@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>emailRest</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- <security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Acesso pelo Sa2</web-resource-name>
+			<url-pattern>/api/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>basic_role</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>KEYCLOAK</auth-method>
+		<realm-name>sso-sa2</realm-name>
+	</login-config>
+	<security-role>
+		<role-name>basic_role</role-name>
+	</security-role> -->
+	
+</web-app>
