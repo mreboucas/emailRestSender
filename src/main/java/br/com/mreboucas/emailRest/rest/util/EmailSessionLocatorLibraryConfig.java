@@ -1,9 +1,8 @@
 package br.com.mreboucas.emailRest.rest.util;
 
 import javax.mail.Session;
-
-import br.com.mreboucas.emailUtil.enumeration.EnumPortas;
 import br.com.mreboucas.emailRest.rest.interfaces.EmailSessionServiceLocatorInterface;
+import br.com.mreboucas.emailUtil.enumeration.EnumPortas;
 
 /**
  * @author Marcelo Rebouças 15 de jun de 2018 - 08:31:10 [marceloreboucas10@gmail.com]

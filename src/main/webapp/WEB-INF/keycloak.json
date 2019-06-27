@@ -16,8 +16,8 @@
 	"disable-trust-manager": false,
 	"allow-any-hostname": true,
 	"truststore": "${jboss.home.dir}/standalone/configuration/sa2.jks",
-	"truststore-password": "KEY_TO_DEFINE",
+	"truststore-password": "cagece",
 	"client-keystore": "${jboss.home.dir}/standalone/configuration/sa2.jks",
-	"client-keystore-password": "KEY_TO_DEFINE",
-	"client-key-password": "KEY_TO_DEFINE"
+	"client-keystore-password": "cagece",
+	"client-key-password": "cagece"
 }

@@ -1,7 +1,6 @@
 package br.com.mreboucas.emailRest.rest.util;
 
 import javax.mail.Session;
-
 import br.com.mreboucas.emailRest.rest.interfaces.EmailSessionServiceLocatorInterface;
 
 /**

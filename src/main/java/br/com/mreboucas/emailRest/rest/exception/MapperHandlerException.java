@@ -12,7 +12,6 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
-
 import br.com.mreboucas.emailRest.rest.message.MessageError;
 /**
  * @author Marcelo Reboucas 7 de mai de 2018 - 10:10:16 [marceloreboucas10@gmail.com]

@@ -13,7 +13,6 @@ import javax.naming.directory.Attribute;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
-
 import br.com.mreboucas.emailRest.rest.timer.TimerSchedule;
 
 /**

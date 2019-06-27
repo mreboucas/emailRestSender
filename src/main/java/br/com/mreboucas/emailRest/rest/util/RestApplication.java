@@ -6,7 +6,6 @@ import javax.servlet.ServletContext;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.SecurityContext;
-
 import br.com.mreboucas.emailRest.rest.resource.EmailResource;
 
 /**

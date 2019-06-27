@@ -6,10 +6,9 @@ import java.util.Properties;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
-
+import br.com.mreboucas.emailRest.rest.interfaces.EmailSessionServiceLocatorInterface;
 import br.com.mreboucas.emailUtil.enumeration.EnumSessionLocatorMailType;
 import br.com.mreboucas.emailUtil.enumeration.EnumSmtpPropertyMail;
-import br.com.mreboucas.emailRest.rest.interfaces.EmailSessionServiceLocatorInterface;
 
 /**
  * @author 212046

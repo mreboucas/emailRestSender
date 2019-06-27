@@ -2,7 +2,6 @@ package br.com.mreboucas.emailRest.rest.timer;
 
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;
-
 import br.com.mreboucas.emailRest.rest.util.EmailUtil;
 	
 @Singleton

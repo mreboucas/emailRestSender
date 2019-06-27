@@ -2,9 +2,8 @@ package emailRest;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
 import javax.ws.rs.core.Response;
-
+import com.sun.jersey.api.client.ClientResponse;
 import br.com.mreboucas.emailUtil.dto.DtoEmail;
 import br.com.mreboucas.emailUtil.exception.EmailSenderException;
 import br.com.mreboucas.emailUtil.util.EmailSenderRest;
@@ -23,6 +22,8 @@ public class RestTest {
 
 		 sendPost();
 		//getIpServer();
+
+
 
 	}
 

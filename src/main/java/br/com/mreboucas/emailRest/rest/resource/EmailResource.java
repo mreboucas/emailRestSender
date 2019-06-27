@@ -12,16 +12,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import com.sun.jersey.api.client.ClientResponse;
-
+import br.com.mreboucas.emailRest.rest.security.ResourceInterceptor;
+import br.com.mreboucas.emailRest.rest.security.SecurityChecked;
+import br.com.mreboucas.emailRest.rest.util.EmailSender;
+import br.com.mreboucas.emailRest.rest.util.RestUtil;
 import br.com.mreboucas.emailUtil.dto.DtoAnexoEmail;
 import br.com.mreboucas.emailUtil.dto.DtoEmail;
 import br.com.mreboucas.emailUtil.enumeration.EnumMimeType;
 import br.com.mreboucas.emailUtil.exception.EmailSenderException;
 import br.com.mreboucas.emailUtil.util.EmailSenderRest;
-import br.com.mreboucas.emailRest.rest.security.ResourceInterceptor;
-import br.com.mreboucas.emailRest.rest.security.SecurityChecked;
-import br.com.mreboucas.emailRest.rest.util.EmailSender;
-import br.com.mreboucas.emailRest.rest.util.RestUtil;
 
 /**
  * @author Marcelo Rebouças 21 de jun de 2018 - 18:43:27 [marceloreboucas10@gmail.com]

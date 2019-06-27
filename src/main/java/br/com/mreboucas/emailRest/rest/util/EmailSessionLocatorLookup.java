@@ -3,7 +3,6 @@ package br.com.mreboucas.emailRest.rest.util;
 import java.util.Properties;
 import javax.mail.Session;
 import javax.naming.InitialContext;
-
 import br.com.mreboucas.emailRest.rest.interfaces.EmailSessionServiceLocatorInterface;
 
 /**
