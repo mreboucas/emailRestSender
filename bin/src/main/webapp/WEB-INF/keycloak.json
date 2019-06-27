@@ -1,0 +1,23 @@
+{
+    "realm": "sso-sa2",
+    "auth-server-url": "https://${SERVIDOR_KEYCLOAK}/auth",
+    "ssl-required": "all",
+    "resource": "app-emailRest",
+    "credentials": {
+    	"secret": "51e091b8-b0d7-4072-8d5e-aa6f237cdf6d"
+    },
+    "use-resource-role-mappings": true,
+	"enable-cors": true,
+	"cors-max-age": 1000,
+	"cors-allowed-methods": "POST, PUT, DELETE, GET,PATCH",
+	"expose-token": true,
+	"principal-attribute": "preferred_username",
+	"connection-pool-size": 20,
+	"disable-trust-manager": false,
+	"allow-any-hostname": true,
+	"truststore": "${jboss.home.dir}/standalone/configuration/sa2.jks",
+	"truststore-password": "KEY_TO_DEFINE",
+	"client-keystore": "${jboss.home.dir}/standalone/configuration/sa2.jks",
+	"client-keystore-password": "KEY_TO_DEFINE",
+	"client-key-password": "KEY_TO_DEFINE"
+}
