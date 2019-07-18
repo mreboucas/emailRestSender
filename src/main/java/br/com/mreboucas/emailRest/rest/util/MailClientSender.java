@@ -1,13 +1,16 @@
 package br.com.mreboucas.emailRest.rest.util;
 
-import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+
 import javax.activation.DataHandler;
 import javax.mail.Message;
+import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.Part;
+import javax.mail.SendFailedException;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.AddressException;
@@ -16,7 +19,11 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
+
 import org.apache.commons.lang.StringUtils;
+
+import br.com.mreboucas.emailRest.rest.exception.DestinatarioEmailInvalidoException;
+import br.com.mreboucas.emailRest.rest.exception.EmailNaoEnviadoException;
 import br.com.mreboucas.emailUtil.dto.DtoAnexoEmail;
 import br.com.mreboucas.emailUtil.dto.DtoEmail;
 import br.com.mreboucas.emailUtil.dto.DtoEmailConfiguracao;
@@ -37,8 +44,10 @@ public class MailClientSender {
 	 * @return void
 	 * @throws Exception
 	 * @throws EmailSenderException
+	 * @throws DestinatarioEmailInvalidoException 
+	 * @throws EmailNaoEnviadoException 
 	 */
-	protected static void senderEmail(DtoEmail emailDto) throws EmailSenderException {
+	protected static void senderEmail(DtoEmail emailDto) throws DestinatarioEmailInvalidoException, EmailNaoEnviadoException {
 
 		try {
 
@@ -154,10 +163,24 @@ public class MailClientSender {
 
 			Transport.send(message);
 
-		} catch (Throwable e) {
-			e.printStackTrace();
-			throw new EmailSenderException(e);
+		} catch (final SendFailedException e) {
+			System.out.println(e.toString());
+			throw new DestinatarioEmailInvalidoException(getEmailsInvalidos(e));
+		} catch (MessagingException e) {
+			System.out.println(e.toString());
+			throw new EmailNaoEnviadoException(e.getMessage());
 		}
+	}
+
+	/**
+	 * @author Marcelo Reboucas [marceloreboucas10@gmail.com] - 17 de jul de 2019 as 16:26:18 
+	 *
+	 * @param e
+	 * @return emails invalidos.
+	 */
+	private static String getEmailsInvalidos(SendFailedException e) {
+		String emailsInvalidos = Arrays.toString(e.getInvalidAddresses());
+		return emailsInvalidos;
 	}
 
 	/**

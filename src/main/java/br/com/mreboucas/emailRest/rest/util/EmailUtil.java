@@ -51,7 +51,6 @@ public abstract class EmailUtil {
 	 *
 	 * a trav�s da f�brica de contexto "com.sun.jndi.dns.DnsContextFactory" e InitialDirContext para realizar pesquisa de DNS.
 	 *
-	 * @author Dirceu da Silva [dirceu.rodrigues@cagece.com.br - dirceusr@gmail.com] 17/05/2013 - 15:37:15.
 	 * @param email
 	 * @return boolean
 	 * @throws NamingException
@@ -101,7 +100,6 @@ public abstract class EmailUtil {
 	/**
 	 * Valida o formato do email.
 	 * 
-	 * @author Dirceu da Silva [dirceu.rodrigues@cagece.com.br - dirceusr@gmail.com] 22/05/2013 - 16:22:03.
 	 * @param email
 	 * @return
 	 */
@@ -114,8 +112,6 @@ public abstract class EmailUtil {
 	}
 
 	/**
-	 * 
-	 * @author Dirceu da Silva [dirceu.rodrigues@cagece.com.br - dirceusr@gmail.com] 22/05/2013 - 16:25:56.
 	 * @param dominio
 	 * @param ictx
 	 * @param attr

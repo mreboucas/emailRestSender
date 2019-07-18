@@ -1,5 +1,7 @@
 package br.com.mreboucas.emailRest.rest.util;
 
+import br.com.mreboucas.emailRest.rest.exception.DestinatarioEmailInvalidoException;
+import br.com.mreboucas.emailRest.rest.exception.EmailNaoEnviadoException;
 import br.com.mreboucas.emailUtil.dto.DtoEmail;
 import br.com.mreboucas.emailUtil.exception.EmailSenderException;
 
@@ -8,7 +10,7 @@ import br.com.mreboucas.emailUtil.exception.EmailSenderException;
  */
 public abstract class EmailSender {
 
-	public static void enviarEmail(DtoEmail emailDto) throws EmailSenderException {
+	public static void enviarEmail(DtoEmail emailDto) throws EmailSenderException, DestinatarioEmailInvalidoException, EmailNaoEnviadoException {
 
 		if (emailDto != null) {
 
